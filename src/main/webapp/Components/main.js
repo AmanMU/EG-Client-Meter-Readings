@@ -88,9 +88,9 @@ $j(document).ready(function () {
                                         <td>${value.accountNo}</td>
                                         <td>${value.year}</td>
                                         <td>${value.month}</td>
-                                        <th scope=\"row\"><input class="my-0 py-2" id="reading_${index}" type="number" min="0" value="${value.reading}" /></th>
-                                        <td><button class="btn btn-primary" id="update_${index}" value=${JSON.stringify(value)} onclick="updateReading(this.id, this.value)">Update</button></td>
-                                        <td><button class="btn btn-danger" value=${JSON.stringify(value)} onclick="deleteReading(this.value)">Delete</button></td>
+                                        <th scope=\"row\"><input class="my-0  py-2 h-100" id="reading_${index}" type="number" min="0" value="${value.reading}" /></th>
+                                        <td><button class="btn btn-outline-primary mx-0" id="update_${index}" value=${JSON.stringify(value)} onclick="updateReading(this.id, this.value)">Update</button></td>
+                                        <td><button class="btn btn-danger mx-0" value=${JSON.stringify(value)} onclick="deleteReading(this.value)">Delete</button></td>
                                    </tr>`));
         });
     });
@@ -113,7 +113,7 @@ $j(document).ready(function () {
             .done(function (data) {
                 readingsByAccount = data;
             });
-        
+
         const prevMaxReading = (!isEmpty("#numReadingMonth") && !isEmpty("#numReadingYear")) ? Math.max(...readingsByAccount
             .filter(reading => reading.accountNo === accountNumber
                 && new Date($j("#numReadingYear").val() + "-" + $j("#numReadingMonth").val()) >= new Date(reading.year.toString() + "-" + reading.month.toString()))

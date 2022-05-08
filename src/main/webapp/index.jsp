@@ -13,6 +13,31 @@
     <title>Meter Reading Service</title>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand translate-top-y" href="#"><img src="Logo.png" alt="" width="64" height="64" class="d-inline-block align-text-top"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="nav nav-pills flex-column flex-sm-row">
+                <li class="nav-item me-0 ms-3">
+                    <a class="flex-md-fill text-md-center nav-link" style="padding-left: -2rem; margin-left:-2rem; font-size:1.5rem; font-weight:700; color: #880034" aria-current="page" href="#">ELECTRO GRID</a>
+                </li>
+                <li class="nav-item">
+                    <a class="flex-md-fill text-md-center nav-link" style="color: #880034" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item ">
+                    <a class=" flex-md-fill text-md-center nav-link active" style="background-color: #880034" href="#">Meter Reading Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="flex-md-fill text-md-center nav-link" aria-current="page" style="color: #880034" href="#">Profile</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
 <div class="container">
     <div class="row">
         <div class="col-8">
@@ -56,7 +81,7 @@
 
                     </div>
                 </div>
-                <input class="btn btn-primary mx-auto" type="submit" id="btnInsertMeterReading">
+                <input class="btn btn-warning btn-lg mx-auto" value="Insert" type="submit" id="btnInsertMeterReading">
             </form>
         </div>
     </div>
@@ -67,15 +92,15 @@
     </div>
 <div class="row">
         <div class="col-12" id="colMeterReadings">
-            <table class="table table-hover" aria-describedby="All the meter readings">
+            <table class="table table-hover border-start border-end border-top" aria-describedby="All the meter readings">
                 <thead>
                 <tr>
-                    <th scope="col">Meter Reader</th>
-                    <th scope="col">Account Number</th>
-                    <th scope="col">Year</th>
-                    <th scope="col">Month</th>
-                    <th scope="col">Reading</th>
-                    <th scope="col" colspan="2">Action</th>
+                    <th scope="col" style="width: 10%">Meter Reader    </th>
+                    <th scope="col" style="width: 10%">Account Number  </th>
+                    <th scope="col" style="width: 10%">Year            </th>
+                    <th scope="col" style="width: 10%">Month           </th>
+                    <th scope="col" style="width: 15%">Reading         </th>
+                    <th scope="col" colspan="2" style="width: 7.5%">Actions</th>
                 </tr>
                 </thead>
                 <tbody id="meterReadingTblBody">
